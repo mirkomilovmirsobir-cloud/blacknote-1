@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sneakers</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link class="rounded-[100%]" rel="icon" type="image/png" href="./images/icon.png" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="max-w-[1280px] mx-auto px-5 flex justify-between navll">
+        <a href=""><h1>Sneakers</h1></a>
+        <ul class="flex gap-[30px]">
+          <li><a href="">Home</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Service</a></li>
+        </ul>
+        <ul class="flex gap-[30px]">
+          <li>
+            <button
+              class="inline-flex items-center justify-center text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+              type="button"
+              data-drawer-target="drawer-right-example"
+              data-drawer-show="drawer-right-example"
+              data-drawer-placement="right"
+              aria-controls="drawer-right-example"
+            >
+              <img src="./images/cart.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <button><img src="./images/like.svg" alt="" /></button>
+          </li>
+          <li>
+            <!-- Modal toggle -->
+            <button
+              data-modal-target="authentication-modal"
+              data-modal-toggle="authentication-modal"
+              class="text-white bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none"
+              type="button"
+            >
+              Contact
+            </button>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="py-[60px]">
+        <!-- Список товаров -->
+        <div class="products-container max-w-[1280px] mx-auto px-5">
+          <div class="products-list grid grid-cols-3">
+            <!-- Товар 1 -->
+            <div
+              class="product-card max-w-[370px] w-full"
+              data-id="1"
+              data-name="Nike"
+              data-price="25000"
+            >
+              <img class="w-full h-[300px]" src="./images/mike.png" alt="" />
+              <h3>Nike</h3>
+              <p>Цена: 25 000 руб.</p>
+              <button class="add-to-cart-btn">В корзину</button>
+            </div>
+            <!-- Товар 2 -->
+            <div
+              class="product-card max-w-[370px] w-full"
+              data-id="2"
+              data-name="Adidas"
+              data-price="5000"
+            >
+              <img class="w-full h-[300px]" src="./images/adidas.png" alt="" />
+              <h3>Adidas</h3>
+              <p>Цена: 5 000 руб.</p>
+              <button class="add-to-cart-btn">В корзину</button>
+            </div>
+            <!-- Товар 1 -->
+            <div
+              class="product-card max-w-[370px] w-full"
+              data-id="1"
+              data-name="Nike"
+              data-price="25000"
+            >
+              <img class="w-full h-[300px]" src="./images/mike.png" alt="" />
+              <h3>Nike</h3>
+              <p>Цена: 25 000 руб.</p>
+              <button class="add-to-cart-btn">В корзину</button>
+            </div>
+            <!-- Товар 2 -->
+            <div
+              class="product-card max-w-[370px] w-full"
+              data-id="2"
+              data-name="Adidas"
+              data-price="5000"
+            >
+              <img class="w-full h-[300px]" src="./images/adidas.png" alt="" />
+              <h3>Adidas</h3>
+              <p>Цена: 5 000 руб.</p>
+              <button class="add-to-cart-btn">В корзину</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Main modal -->
+    <div
+      id="authentication-modal"
+      tabindex="-1"
+      aria-hidden="true"
+      class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+    >
+      <div class="relative p-4 w-full max-w-md max-h-full">
+        <!-- Modal content -->
+        <div
+          class="relative bg-[#111827] text-white rounded-[20px] shadow-sm p-4 md:p-6"
+        >
+          <!-- Modal header -->
+          <div
+            class="flex items-center justify-between border-b border-default pb-4 md:pb-5"
+          >
+            <h3 class="text-lg font-medium text-heading">
+              Sign in to our platform
+            </h3>
+            <button
+              type="button"
+              class="text-body bg-transparent hover:bg-neutral-tertiary hover:text-heading rounded-base text-sm w-9 h-9 ms-auto inline-flex justify-center items-center"
+              data-modal-hide="authentication-modal"
+            >
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18 17.94 6M18 18 6.06 6"
+                />
+              </svg>
+              <span class="sr-only">Close modal</span>
+            </button>
+          </div>
+          <!-- Modal body -->
+          <form action="#" class="pt-4 md:pt-6">
+            <div class="mb-4">
+              <label
+                for="email"
+                class="block mb-2.5 text-sm font-medium text-heading"
+                >Your email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="bg-gray-700 rounded-[10px] text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body text-gray-300"
+                placeholder="example@company.com"
+                required
+              />
+            </div>
+            <div>
+              <label
+                for="password"
+                class="block mb-2.5 text-sm font-medium text-heading"
+                >Your password</label
+              >
+              <input
+                type="password"
+                id="password"
+                class="bg-gray-700 rounded-[10px] text-heading text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-3 py-2.5 shadow-xs placeholder:text-body text-gray-300"
+                placeholder="•••••••••"
+                required
+              />
+            </div>
+            <div class="flex items-start my-6">
+              <div class="flex items-center">
+                <input
+                  id="checkbox-remember"
+                  type="checkbox"
+                  value=""
+                  class="w-4 h-4 bg-blue-700 text-green rounded-xs bg-neutral-secondary-medium focus:ring-2 focus:ring-brand-soft"
+                />
+                <label
+                  for="checkbox-remember"
+                  class="ms-2 text-sm font-medium text-heading"
+                  >Remember me</label
+                >
+              </div>
+              <a
+                href="#"
+                class="ms-auto text-sm font-medium text-fg-brand hover:underline text-[#2563EB]"
+                >Lost Password?</a
+              >
+            </div>
+            <button
+              type="submit"
+              class="text-white bg-[#2563EB] border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 rounded-base text-sm px-4 py-2.5 focus:outline-none w-full mb-3"
+            >
+              Login to your account
+            </button>
+            <div class="text-sm font-medium text-body">
+              Not registered?
+              <a href="#" class="text-fg-brand text-[#2563EB] hover:underline"
+                >Create account</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- drawer component -->
+    <div
+      id="drawer-right-example"
+      class="fixed top-0 right-0 z-40 h-screen p-4 overflow-y-auto transition-transform translate-x-full bg-[#1A202C] text-white w-96"
+      tabindex="-1"
+      aria-labelledby="drawer-right-label"
+    >
+      <div class="border-b border-default pb-4 mb-5 flex items-center">
+        <h5
+          id="drawer-right-example"
+          class="inline-flex items-center text-lg font-medium text-body"
+        >
+          Korzinka
+        </h5>
+        <button
+          type="button"
+          data-drawer-hide="drawer-right-example"
+          aria-controls="drawer-right-example"
+          class="text-body bg-transparent hover:text-heading hover:bg-neutral-tertiary rounded-base w-9 h-9 absolute top-2.5 end-2.5 flex items-center justify-center"
+        >
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18 17.94 6M18 18 6.06 6"
+            />
+          </svg>
+          <span class="sr-only">Close menu</span>
+        </button>
+      </div>
+      <!-- Корзина -->
+      <div class="cart-container">
+        <h2>Ваша корзина</h2>
+        <ul id="cart-items">
+          <!-- Сюда JavaScript будет добавлять выбранные товары -->
+        </ul>
+        <div class="cart-total">
+          <strong>Итого: <span id="total-price">0</span> руб.</strong>
+        </div>
+        <button id="clear-cart-btn">Очистить корзину</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
